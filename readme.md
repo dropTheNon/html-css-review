@@ -18,7 +18,14 @@ This is a review of your working knowledge of HTML and CSS. Note that this revie
 1.) Create a valid, empty HTML page with the necessary tags.
 
 ```html
-<!-- Code goes here -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+  </body>
+</html>
 ```
 
 2.) What are the differences between these tags?
@@ -32,7 +39,8 @@ This is a review of your working knowledge of HTML and CSS. Note that this revie
 ```
 
 ```
-Explain here.
+Tag 1 is an image tag, which displays the image linked in the "src" (source) location, and if the image won't display, displays the "alt" (alternate) description.
+Tag 2 is a "div", or container, that lets you divide your website up into different areas to do different things.
 ```
 
 ---
@@ -57,32 +65,38 @@ Explain here.
 ```
 
 ```
-Explain here
+Inline CSS hard-codes your style/CSS into your HTML, and is the least preferable.
+Internal style sheets link your HTML file with a separate CSS file where you make your changes, and allows you to keep all your style changes to a certain element, class, or ID in one spot.
+External style sheets allow you to quickly use a pre-set style sheet, and quickly add style and polish to your document.
 ```
 
 2.) Below are some different CSS selectors. Use CSS comments to describe what each selector will do.
 
 ```css
-/* comment like this */
+/* will turn your "box" div into a spherical or oval div */
 div {
   border-radius: 50%;
 }
 
+/* gives paragraphs that are children of the class "header" an 18pixel font-size */
 .header p {
   font-size: 18px;
 }
 
+/* gives your elements with class "footer" a fixed (absolute) position, and a bottom of 0 */
 .footer {
   position: absolute;
   bottom: 0;
 }
 
+/* Gives elements with class "splash-image" a background image, tells it to cover the whole element, and gives it a width of the entire page*/
 .splash-image {
   background-image: url("../images/ocean.jpg");
   background-size: cover;
   width: 100%;
 }
 
+/* Changes elements with the class "ninja:hover" to display nothing, and have a color of black*/
 .ninja:hover {
   display: none;
   color: black;
